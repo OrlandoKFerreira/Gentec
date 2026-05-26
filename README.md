@@ -1,3 +1,10 @@
+## Additional Documentation
+This document contains a detailed description of my contributions to the Gentec project, including process documentation, frontend and backend development, API integration, and implementation of Human Resources management features using React and Spring Boot.
+
+- [MyRole.md](MyRole.md)
+
+
+
 # GENTEC
 
 
