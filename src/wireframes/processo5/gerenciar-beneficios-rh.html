@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciar Benefícios</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div class="header">
+    <div>Sistema RH</div>
+    <div>Marcelo (RH)</div>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+    <a>Dashboard</a>
+    <a>Benefícios</a>
+    <a>Pontuação</a>
+    <a>Resgates</a>
+</div>
+
+<div class="content">
+
+    <div class="card">
+        <h2>Gerenciar Benefícios</h2>
+
+        <label>Nome do benefício</label>
+        <input type="text">
+
+        <label>Status</label>
+        <select>
+            <option>Todos</option>
+            <option>Ativo</option>
+            <option>Inativo</option>
+        </select>
+
+        <button>Filtrar</button>
+        <button>Cadastrar Benefício</button>
+    </div>
+
+    <div class="card">
+        <table>
+            <tr>
+                <th>Benefício</th>
+                <th>Custo</th>
+                <th>Status</th>
+                <th>Precisa aprovação</th>
+                <th>Ação</th>
+            </tr>
+
+            <tr>
+                <td>1 dia de folga</td>
+                <td>50 pontos</td>
+                <td><span class="badge badge-ativo">Ativo</span></td>
+                <td>Sim</td>
+                <td>
+                    <button>Ver</button>
+                    <button>Editar</button>
+                    <button class="danger">Desativar</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Vale lanche</td>
+                <td>30 pontos</td>
+                <td><span class="badge badge-ativo">Ativo</span></td>
+                <td>Não</td>
+                <td>
+                    <button>Ver</button>
+                    <button>Editar</button>
+                    <button class="danger">Desativar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <button>1</button>
+        <button>2</button>
+        <button>Próxima</button>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

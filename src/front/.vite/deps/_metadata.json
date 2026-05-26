@@ -1,0 +1,58 @@
+{
+  "hash": "d03a3f05",
+  "configHash": "a1e7669c",
+  "lockfileHash": "3b05e9f4",
+  "browserHash": "861080a3",
+  "optimized": {
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.mjs",
+      "file": "@mui_material.js",
+      "fileHash": "60f400ab",
+      "needsInterop": false
+    },
+    "@mui/x-charts": {
+      "src": "../../node_modules/@mui/x-charts/index.mjs",
+      "file": "@mui_x-charts.js",
+      "fileHash": "2a679915",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "06492c1a",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "a52c533a",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "cd88aa96",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "f16b27fd",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "ToggleButtonGroup-COsYRyGO": {
+      "file": "ToggleButtonGroup-COsYRyGO.js",
+      "isDynamicEntry": false
+    },
+    "react-BDWiK9rz": {
+      "file": "react-BDWiK9rz.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-C08K6auO": {
+      "file": "react-dom-C08K6auO.js",
+      "isDynamicEntry": false
+    }
+  }
+}

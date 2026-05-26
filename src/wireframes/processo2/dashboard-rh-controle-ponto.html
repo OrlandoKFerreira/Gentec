@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Histórico de Pontos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 220px;
+            background: #34495e;
+            height: 100vh;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #2c3e50;
+        }
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 { margin-top: 0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover { background: #2980b9; }
+        label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+        }
+        .filters {
+            display: flex;
+            gap: 20px;
+        }
+        .filters > div {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div>Sistema RH</div>
+    <div>Marcelo (RH)</div>
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dashboard-rh-controle-ponto.html"><strong>Controle de Ponto</strong></a>
+    </div>
+
+    <div class="content">
+
+        <div class="card">
+            <h2>Histórico de Pontos</h2>
+            <p>Consulte os registros de ponto dos funcionários.</p>
+        </div>
+
+        <div class="card">
+            <h3>Registros</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Funcionário</th>
+                        <th>Data</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>05/04/2026</td>
+                        <td>08:00</td>
+                        <td>17:00</td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>04/04/2026</td>
+                        <td>08:10</td>
+                        <td>17:05</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Souza</td>
+                        <td>05/04/2026</td>
+                        <td>08:30</td>
+                        <td>17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Souza</td>
+                        <td>04/04/2026</td>
+                        <td>08:00</td>
+                        <td>17:10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="rh-estatistica-ponto.html"><button>Ver Estatísticas</button></a>
+
+    </div>
+</div>
+
+</body>
+</html>

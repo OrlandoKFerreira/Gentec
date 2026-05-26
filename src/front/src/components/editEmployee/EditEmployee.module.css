@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.container section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 1.8rem;
+    color: #133a71;
+    margin: 0;
+}
+
+.title h2 {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 5px 0 0 0;
+    font-weight: 400;
+}
+
+.back {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: #003d93;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-bottom: -20px;
+    align-self: flex-start;
+}
+
+.back:hover {
+    background-color: #133a71;
+    transform: scale(1.05);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form label {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form input,
+.form select {
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #edf2f7;
+    background-color: #f8fafc;
+    font-size: 1rem;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: #003d93;
+    box-shadow: 0 0 0 3px rgba(0, 61, 147, 0.1);
+    background-color: white;
+}
+
+.form .checkboxField {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.form .checkboxField input {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.form .checkboxField label {
+    cursor: pointer;
+}
+
+.form button {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #003d93;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.form button:hover {
+    background-color: #133a71;
+}
+
+.form button:active {
+    transform: translateY(1px);
+}

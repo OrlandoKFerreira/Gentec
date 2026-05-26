@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meus Resgates</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div class="header">
+    <div>Sistema RH</div>
+    <div>João (Funcionário)</div>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+    <a>Dashboard</a>
+    <a>Loja de Benefícios</a>
+    <a>Meus Resgates</a>
+</div>
+
+<div class="content">
+
+    <div class="card">
+        <h2>Meus Resgates</h2>
+
+        <p><strong>Total:</strong> 6</p>
+
+        <label>Status</label>
+        <select>
+            <option>Todos</option>
+            <option>Pendente</option>
+            <option>Aprovado</option>
+            <option>Recusado</option>
+            <option>Resgatado</option>
+        </select>
+
+        <button>Filtrar</button>
+    </div>
+
+    <div class="card">
+        <table>
+            <tr>
+                <th>Benefício</th>
+                <th>Pontos usados</th>
+                <th>Status</th>
+                <th>Data</th>
+                <th>Detalhe</th>
+            </tr>
+
+            <tr>
+                <td>1 dia de folga</td>
+                <td>50</td>
+                <td><span class="badge badge-pendente">Pendente</span></td>
+                <td>25/04/2026</td>
+                <td><button>Ver</button></td>
+            </tr>
+
+            <tr>
+                <td>Vale lanche</td>
+                <td>30</td>
+                <td><span class="badge badge-resgatado">Resgatado</span></td>
+                <td>20/04/2026</td>
+                <td><button>Ver</button></td>
+            </tr>
+
+            <tr>
+                <td>1 manhã de folga</td>
+                <td>40</td>
+                <td><span class="badge badge-aprovado">Aprovado</span></td>
+                <td>15/04/2026</td>
+                <td><button>Ver</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <button>1</button>
+        <button>2</button>
+        <button>Próxima</button>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

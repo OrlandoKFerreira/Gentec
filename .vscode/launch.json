@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GentecApplication<gentec>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pucti2.gentec.GentecApplication",
+            "projectName": "gentec",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,252 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.container section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.title h1 {
+    font-size: 1.8rem;
+    color: #133a71;
+    margin: 0;
+}
+
+.title h2 {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 5px 0 0 0;
+    font-weight: 400;
+}
+
+.back {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: #003d93;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-bottom: -10px;
+    align-self: flex-start;
+}
+
+.back:hover {
+    background-color: #133a71;
+    transform: scale(1.05);
+}
+
+.tableActions {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tableActions button { 
+    background-color: #003d93;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tableActions button:hover {
+    background-color: #133a71;
+}
+
+.searchBar {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #edf2f7;
+    background-color: #f8fafc;
+    font-size: 1rem;
+    min-width: 300px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchBar:focus {
+    border-color: #003d93;
+    box-shadow: 0 0 0 3px rgba(0, 61, 147, 0.1);
+    background-color: white;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+}
+
+.table th {
+    text-align: left;
+    padding: 15px;
+    background-color: #f8fafc;
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.table td {
+    padding: 15px;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+.table tr:hover td {
+    background-color: #fcfcfd;
+}
+
+.table td>button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: white;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.table td>button:hover {
+    opacity: 0.9;
+}
+
+.filters {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filterGroup h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.checkboxList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkboxList label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #4a5568;
+    user-select: none;
+}
+
+.checkboxList input[type="checkbox"] {
+    accent-color: #003d93;
+    width: 16px;
+    height: 16px;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1000;
+}
+
+.modal {
+    width: min(420px, 100%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+    padding: 24px;
+}
+
+.modal h2 {
+    color: #133a71;
+    font-size: 1.35rem;
+    margin: 0 0 12px;
+}
+
+.modal p {
+    color: #4a5568;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modalActions button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 16px;
+}
+
+.modalActions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.cancelButton {
+    background-color: #edf2f7;
+    color: #2d3748;
+}
+
+.deleteButton {
+    background-color: #930000ff;
+    color: white;
+}
