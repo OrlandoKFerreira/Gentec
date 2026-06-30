@@ -18,15 +18,17 @@ Atividade 1 **Visualizar página de humor**
 
 ![Wireframe - Dashboard Funcionário](images/processo3-wireframes/dash-funcionario.jpeg)
 
-| **Campo**  | **Tipo**      | **Restrições**                                          | **Valor default** |
-| ---------- | ------------- | ------------------------------------------------------- | ----------------- |
-| Humor      | Seleção única | Somente leitura; exibido apenas se já registrado no dia | —                 |
-| Comentário | Área de texto | Somente leitura; exibido apenas se já registrado no dia | —                 |
+| Campo  | Tipo           | Restrições      | Valor default |
+| ------ | -------------- | --------------- | ------------- |
+| Data   | Data           | Somente leitura | preenchido    |
+| Status | Caixa de texto | Somente leitura | calculado     |
 
-| **Comandos**    | **Destino**                                | **Tipo** |
-| --------------- | ------------------------------------------ | -------- |
-| Registrar Humor | Registrar humor                            | default  |
-| Ver Histórico   | Visualizar histórico de registros de humor | default  |
+
+| Comando         | Destino                                    | Tipo    |
+| --------------- | ------------------------------------------ | ------- |
+| Registrar Humor | Registrar Humor                            | default |
+| Ver Histórico   | Visualizar histórico de registros de humor | default |
+
 
 ---
 
@@ -34,14 +36,15 @@ Atividade 2 **Registrar Humor**
 
 ![Wireframe - Registrar Humor](images/processo3-wireframes/registrar-humor.jpeg)
 
-| **Campo**                        | **Tipo**      | **Restrições**                                         | **Valor default** |
-| -------------------------------- | ------------- | ------------------------------------------------------ | ----------------- |
-| Como você está se sentindo hoje? | Seleção única | Obrigatório; opções: Feliz, Neutro, Triste, Estressado | Feliz             |
-| Comentário                       | Área de texto | Opcional                                               | —                 |
+| Campo                            | Tipo          | Restrições                                             | Valor default |
+| -------------------------------- | ------------- | ------------------------------------------------------ | ------------- |
+| Como você está se sentindo hoje? | Seleção única | Obrigatório; opções: Feliz, Neutro, Triste, Estressado | Feliz         |
+| Comentário                       | Área de texto | Opcional                                               | vazio         |
 
-| **Comandos** | **Destino**       | **Tipo** |
-| ------------ | ----------------- | -------- |
-| Salvar       | Fim do Processo 3 | default  |
+| Comando | Destino         | Tipo    |
+| ------- | --------------- | ------- |
+| Salvar  | Registrar humor | default |
+
 
 ---
 
@@ -49,15 +52,23 @@ Atividade 3 **Visualizar histórico de registros de humor**
 
 ![Wireframe - Histórico de Humor](images/processo3-wireframes/historico-humor.jpeg)
 
-| **Campo**    | **Tipo** | **Restrições**                                       | **Valor default** |
-| ------------ | -------- | ---------------------------------------------------- | ----------------- |
-| Data inicial | Data     | Opcional; deve ser anterior ou igual à data final    | —                 |
-| Data final   | Data     | Opcional; deve ser posterior ou igual à data inicial | —                 |
-| Registros    | Tabela   | Somente leitura; colunas: Data, Humor, Comentário    | —                 |
+| Campo               | Tipo   | Restrições      | Valor default |
+| ------------------- | ------ | --------------- | ------------- |
+| Total de registros  | Número | Somente leitura | calculado     |
+| Data inicial        | Data   | Opcional        | vazio         |
+| Data final          | Data   | Opcional        | vazio         |
+| Data (tabela)       | Data   | Somente leitura | preenchido    |
+| Humor (tabela)      | Texto  | Somente leitura | preenchido    |
+| Comentário (tabela) | Texto  | Somente leitura | preenchido    |
 
-| **Comandos** | **Destino**                                | **Tipo** |
-| ------------ | ------------------------------------------ | -------- |
-| Filtrar      | Visualizar histórico de registros de humor | default  |
+
+| Comando          | Destino                                    | Tipo      |
+| ---------------- | ------------------------------------------ | --------- |
+| Filtrar          | Visualizar histórico de registros de humor | default   |
+| Página anterior  | Página anterior do histórico               | paginação |
+| Próxima página   | Próxima página do histórico                | paginação |
+| Número da página | Página selecionada                         | paginação |
+
 
 ---
 
@@ -65,15 +76,23 @@ Atividade 4 **Visualizar painel de registros de humor**
 
 ![Wireframe - Dashboard RH](images/processo3-wireframes/dash-rh.jpeg)
 
-| **Campo**     | **Tipo** | **Restrições**                                              | **Valor default** |
-| ------------- | -------- | ----------------------------------------------------------- | ----------------- |
-| Resumo Diário | Tabela   | Somente leitura; colunas: Feliz, Neutro, Triste, Estressado | —                 |
-| Resumo Mensal | Tabela   | Somente leitura; colunas: Feliz, Neutro, Triste, Estressado | —                 |
+| Campo                      | Tipo   | Restrições      | Valor default |
+| -------------------------- | ------ | --------------- | ------------- |
+| Feliz (Resumo Diário)      | Número | Somente leitura | calculado     |
+| Neutro (Resumo Diário)     | Número | Somente leitura | calculado     |
+| Triste (Resumo Diário)     | Número | Somente leitura | calculado     |
+| Estressado (Resumo Diário) | Número | Somente leitura | calculado     |
+| Feliz (Resumo Mensal)      | Número | Somente leitura | calculado     |
+| Neutro (Resumo Mensal)     | Número | Somente leitura | calculado     |
+| Triste (Resumo Mensal)     | Número | Somente leitura | calculado     |
+| Estressado (Resumo Mensal) | Número | Somente leitura | calculado     |
 
-| **Comandos**         | **Destino**                                       | **Tipo** |
-| -------------------- | ------------------------------------------------- | -------- |
-| Ver Registros        | Visualizar histórico geral de registros de humor  | default  |
-| Ver Histórico Mensal | Visualizar histórico mensal de registros de humor | default  |
+
+| Comando              | Destino                                           | Tipo    |
+| -------------------- | ------------------------------------------------- | ------- |
+| Ver Registros        | Visualizar histórico geral de registros de humor  | default |
+| Ver Histórico Mensal | Visualizar histórico mensal de registros de humor | default |
+
 
 ---
 
@@ -81,16 +100,25 @@ Atividade 5 **Visualizar histórico geral de registros de humor**
 
 ![Wireframe - Ver Registros](images/processo3-wireframes/ver-registros.jpeg)
 
-| **Campo**   | **Tipo**       | **Restrições**                                                | **Valor default** |
-| ----------- | -------------- | ------------------------------------------------------------- | ----------------- |
-| Data        | Data           | Opcional                                                      | —                 |
-| Funcionário | Caixa de texto | Opcional                                                      | —                 |
-| Registros   | Tabela         | Somente leitura; colunas: Funcionário, Data, Humor, Histórico | —                 |
+| Campo                | Tipo           | Restrições      | Valor default |
+| -------------------- | -------------- | --------------- | ------------- |
+| Total de registros   | Número         | Somente leitura | calculado     |
+| Data                 | Data           | Opcional        | vazio         |
+| Funcionário          | Caixa de texto | Opcional        | vazio         |
+| Funcionário (tabela) | Texto          | Somente leitura | preenchido    |
+| Data (tabela)        | Data           | Somente leitura | preenchido    |
+| Humor (tabela)       | Texto          | Somente leitura | preenchido    |
+| Histórico            | Botão          | Somente leitura | Visualizar    |
 
-| **Comandos** | **Destino**                                         | **Tipo** |
-| ------------ | --------------------------------------------------- | -------- |
-| Filtrar      | Visualizar histórico geral de registros de humor    | default  |
-| Visualizar   | Visualizar histórico de humor de usuário específico | default  |
+
+| Comando          | Destino                                             | Tipo      |
+| ---------------- | --------------------------------------------------- | --------- |
+| Filtrar          | Visualizar histórico geral de registros de humor    | default   |
+| Visualizar       | Visualizar histórico de humor de usuário específico | default   |
+| Página anterior  | Página anterior                                     | paginação |
+| Próxima página   | Próxima página                                      | paginação |
+| Número da página | Página selecionada                                  | paginação |
+
 
 ---
 
@@ -98,9 +126,18 @@ Atividade 6 **Visualizar histórico de humor de usuário específico**
 
 ![Wireframe - Histórico de Humor](images/processo3-wireframes/historico-rh.jpeg)
 
-| **Campo** | **Tipo** | **Restrições**                                    | **Valor default** |
-| --------- | -------- | ------------------------------------------------- | ----------------- |
-| Registros | Tabela   | Somente leitura; colunas: Data, Humor, Comentário | —                 |
+| Campo              | Tipo   | Restrições      | Valor default |
+| ------------------ | ------ | --------------- | ------------- |
+| Total de registros | Número | Somente leitura | calculado     |
+| Data               | Data   | Somente leitura | preenchido    |
+| Humor              | Texto  | Somente leitura | preenchido    |
+| Comentário         | Texto  | Somente leitura | preenchido    |
+
+| Comando          | Destino            | Tipo      |
+| ---------------- | ------------------ | --------- |
+| Página anterior  | Página anterior    | paginação |
+| Próxima página   | Próxima página     | paginação |
+| Número da página | Página selecionada | paginação |
 
 ---
 
@@ -108,6 +145,18 @@ Atividade 7 **Visualizar histórico mensal de registros de humor**
 
 ![Wireframe - Histórico Mensal](images/processo3-wireframes/historicomensal.jpeg)
 
-| **Campo**         | **Tipo** | **Restrições**                                                   | **Valor default** |
-| ----------------- | -------- | ---------------------------------------------------------------- | ----------------- |
-| Registros Mensais | Tabela   | Somente leitura; colunas: Mês, Feliz, Neutro, Triste, Estressado | —                 |
+| Campo          | Tipo   | Restrições      | Valor default |
+| -------------- | ------ | --------------- | ------------- |
+| Total de meses | Número | Somente leitura | calculado     |
+| Mês            | Texto  | Somente leitura | preenchido    |
+| Feliz          | Número | Somente leitura | calculado     |
+| Neutro         | Número | Somente leitura | calculado     |
+| Triste         | Número | Somente leitura | calculado     |
+| Estressado     | Número | Somente leitura | calculado     |
+
+| Comando          | Destino            | Tipo      |
+| ---------------- | ------------------ | --------- |
+| Página anterior  | Página anterior    | paginação |
+| Próxima página   | Próxima página     | paginação |
+| Número da página | Página selecionada | paginação |
+
