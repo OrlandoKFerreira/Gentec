@@ -20,80 +20,96 @@ O processo se encerra com o registro do ponto ou com a visualização das inform
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
 | --------- | -------- | -------------- | ----------------- |
-| Histórico | Tabela   | obrigatório    | preenchido        |
+| Funcionário | Texto | obrigatório | preenchido |
+| Data | Data | obrigatório | preenchido |
+| Entrada | Hora | obrigatório | preenchido |
+| Saída | Hora | obrigatório | preenchido |
 
-| **Comandos**     | **Destino**  | **Tipo** |
-| ---------------- | ------------ | -------- |
-| ver estatísticas | Estatísticas | default  |
+| **Comandos** | **Destino** | **Tipo** |
+| ------------ | ----------- | -------- |
+| Ver Estatísticas | Estatísticas de Pontos | default |
 
 **Atividade 2 Estatisticas de Pontos**
 
 ![Wireframe - Registro de Ponto](images/estatistica.jpeg)
 
-| **Campo**          | **Tipo** | **Restrições** | **Valor default** |
-| ------------------ | -------- | -------------- | ----------------- |
-| Total funcionários | Número   | obrigatório    | calculado         |
-| Presentes hoje     | Número   | obrigatório    | calculado         |
-| Atrasados agora    | Número   | obrigatório    | calculado         |
-| Entradas atrasadas | Número   | obrigatório    | calculado         |
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| ---------- | -------- | -------------- | ----------------- |
+| Total funcionários | Número | obrigatório | calculado |
+| Presentes hoje | Número | obrigatório | calculado |
+| Atrasados agora | Número | obrigatório | calculado |
+| Entradas atrasadas | Número | obrigatório | calculado |
+| Funcionário (Presentes Hoje) | Texto | automático | preenchido |
+| Cargo (Presentes Hoje) | Texto | automático | preenchido |
+| Setor (Presentes Hoje) | Texto | automático | preenchido |
+| Expediente (Presentes Hoje) | Texto | automático | preenchido |
+| Entrada (Presentes Hoje) | Hora | automático | preenchido |
+| Funcionário (Atrasados Agora) | Texto | automático | preenchido |
+| Cargo (Atrasados Agora) | Texto | automático | preenchido |
+| Setor (Atrasados Agora) | Texto | automático | preenchido |
+| Expediente (Atrasados Agora) | Texto | automático | preenchido |
+| Entrada (Atrasados Agora) | Hora | automático | preenchido |
 
 | **Comandos** | **Destino** | **Tipo** |
 | ------------ | ----------- | -------- |
-| —            | —           | —        |
+| Voltar ao Histórico | Histórico de Pontos | default |
 
 **Atividade 3 Consultar Histórico de Pontos**
 
 ![Wireframe - Registro de Ponto](images/rh-historico.jpeg)
 
-| **Campo**   | **Tipo** | **Restrições** | **Valor default** |
-| ----------- | -------- | -------------- | ----------------- |
-| Funcionário | Texto    | automático     | preenchido        |
-| Data        | Data     | automático     | preenchido        |
-| Entrada     | Hora     | automático     | preenchido        |
-| Saída       | Hora     | automático     | pode estar vazio  |
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| ---------- | -------- | -------------- | ----------------- |
+| Funcionário | Texto | automático | preenchido |
+| Data | Data | automático | preenchido |
+| Entrada | Hora | automático | preenchido |
+| Saída | Hora | automático | preenchido |
 
-| **Comandos**     | **Destino**                   | **Tipo** |
-| ---------------- | ----------------------------- | -------- |
-| Ver Estatísticas | Visualizar Estatísticas de Ponto | default  |
+| **Comandos** | **Destino** | **Tipo** |
+| ------------ | ----------- | -------- |
+| Ver Estatísticas | Estatísticas de Pontos | default |
 
 **Registros de Pontos**
 
 ![Wireframe - Registro de Ponto](images/rh-lista-registro.jpeg)
 
 | **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --------- | -------- | -------------- | ----------------- |
-| Registros | Tabela   | obrigatório    | preenchido        |
+| ---------- | -------- | -------------- | ----------------- |
+| Funcionário | Texto | obrigatório | preenchido |
+| Data | Data | obrigatório | preenchido |
+| Entrada | Hora | obrigatório | preenchido |
+| Saída | Hora | pode estar vazio | preenchido |
 
 | **Comandos** | **Destino** | **Tipo** |
 | ------------ | ----------- | -------- |
-| —            | —           | —        |
+| — | — | — |
 
 **Atividade 4 Registrar entrada**
 
 ![Wireframe - Registro de Ponto](images/registro-entrada.jpeg)
 
-| **Campo**      | **Tipo**       | **Restrições** | **Valor default** |
-| -------------- | -------------- | -------------- | ----------------- |
-| Última entrada | Hora           | automático     | preenchido        |
-| Última saída   | Hora           | automático     | preenchido        |
-| Status atual   | Caixa de texto | obrigatório    | calculado         |
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| ---------- | -------- | -------------- | ----------------- |
+| Última entrada | Hora | automático | preenchido |
+| Última saída | Hora | automático | preenchido |
+| Status atual | Caixa de texto | obrigatório | calculado |
 
-| **Comandos**      | **Destino**               | **Tipo** |
-| ----------------- | ------------------------- | -------- |
-| registrar entrada | Receber dados do registro | default  |
-| histórico de ponto | Visualizar histórico do funcionário | default |
+| **Comandos** | **Destino** | **Tipo** |
+| ------------ | ----------- | -------- |
+| Registrar entrada | Receber dados do registro | default |
+| Histórico de ponto | Visualizar histórico do funcionário | default |
 
 **Atividade 5 Registrar saída**
 
 ![Wireframe - Registro de Ponto](images/registro-saida.jpeg)
 
-| **Campo**      | **Tipo**       | **Restrições** | **Valor default** |
-| -------------- | -------------- | -------------- | ----------------- |
-| Última entrada | Hora           | automático     | preenchido        |
-| Última saída   | Hora           | automático     | pode estar vazio  |
-| Status atual   | Caixa de texto | obrigatório    | calculado         |
+| **Campo** | **Tipo** | **Restrições** | **Valor default** |
+| ---------- | -------- | -------------- | ----------------- |
+| Última entrada | Hora | automático | preenchido |
+| Última saída | Hora | automático | pode estar vazio |
+| Status atual | Caixa de texto | obrigatório | calculado |
 
-| **Comandos**    | **Destino**               | **Tipo** |
-| --------------- | ------------------------- | -------- |
-| registrar saída | Receber dados do registro | default  |
-| histórico de ponto | Visualizar histórico do funcionário | default |
+| **Comandos** | **Destino** | **Tipo** |
+| ------------ | ----------- | -------- |
+| Registrar saída | Receber dados do registro | default |
+| Histórico de ponto | Visualizar histórico do funcionário | default |
